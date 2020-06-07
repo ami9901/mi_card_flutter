@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
         //Safe area takes up the space which is visible , ignoring the phone notch, etc
         body: SafeArea(
           child: Column(
+            mainAxisSize: MainAxisSize.min, //setting the size that the column should take up to minimum, by default it is maximum
+            verticalDirection: VerticalDirection.up, // Direction in which the children would lay out on the vertical axis, up is towards upwards , by default it is downwards
             children: <Widget>[
               Container(
                   //Container with no children try to be as big as possible
