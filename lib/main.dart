@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.red,
         //Safe area takes up the space which is visible , ignoring the phone notch, etc
         body: SafeArea(
-          child: Column(
+          child: Row(
             //mainAxisSize: MainAxisSize.min, //setting the size that the column should take up to minimum, by default it is maximum
             //verticalDirection: VerticalDirection.up, // Direction in which the children would lay out on the vertical axis, up is towards upwards , by default it is downwards
             //mainAxisAlignment: MainAxisAlignment.spaceEvenly, //align the column axis from center, space children evenly,etc.
-            crossAxisAlignment: CrossAxisAlignment.stretch, // for a column cross alignment is horizontal axis and vice versa for a row
+            //crossAxisAlignment: CrossAxisAlignment.stretch, // for a column cross alignment is horizontal axis and vice versa for a row
             children: <Widget>[
               Container(
                   //Container with no children try to be as big as possible
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                   padding: EdgeInsets.all(5.0),
                   //Containers with children, size themselves to their children
                   child: Text("Container 1")),
-              SizedBox(height: 30.0,),
+              SizedBox(width: 30.0,), // specify width for spacing containers in row and height for column containers
               Container(
                   //Container with no children try to be as big as possible
                   width: 100.0,
@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
                   padding: EdgeInsets.all(5.0),
                   //Containers with children, size themselves to their children
                   child: Text("Container 2")),
+              SizedBox(width: 30.0,), // specify width for spacing containers in row and height for column containers
               Container(
                   //Container with no children try to be as big as possible
                   width: 100.0,
