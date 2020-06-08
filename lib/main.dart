@@ -9,44 +9,54 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.teal,
         //Safe area takes up the space which is visible , ignoring the phone notch, etc
         body: SafeArea(
           child: Row(
             //mainAxisSize: MainAxisSize.min, //setting the size that the column should take up to minimum, by default it is maximum
             //verticalDirection: VerticalDirection.up, // Direction in which the children would lay out on the vertical axis, up is towards upwards , by default it is downwards
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly, //align the column axis from center, space children evenly,etc.
-            //crossAxisAlignment: CrossAxisAlignment.stretch, // for a column cross alignment is horizontal axis and vice versa for a row
+            mainAxisAlignment: MainAxisAlignment
+                .spaceBetween, //align the column axis from center, space children evenly,etc.
+            crossAxisAlignment: CrossAxisAlignment
+                .stretch, // for a column cross alignment is horizontal axis and vice versa for a row
             children: <Widget>[
               Container(
-                  //Container with no children try to be as big as possible
-                  width: 100.0,
-                  height: 100.0,
-                  color: Colors.white,
-                  //margin: EdgeInsets.all(20.0),
-                  padding: EdgeInsets.all(5.0),
-                  //Containers with children, size themselves to their children
-                  child: Text("Container 1")),
-              SizedBox(width: 30.0,), // specify width for spacing containers in row and height for column containers
+                //Container with no children try to be as big as possible
+                width: 100.0,
+                height: 100.0,
+                color: Colors.red,
+              ),
+              // specify width for spacing containers in row and height for column containers
               Container(
-                  //Container with no children try to be as big as possible
-                  width: 100.0,
-                  height: 100.0,
-                  color: Colors.blue,
-                  //margin: EdgeInsets.all(20.0),
-                  padding: EdgeInsets.all(5.0),
-                  //Containers with children, size themselves to their children
-                  child: Text("Container 2")),
-              SizedBox(width: 30.0,), // specify width for spacing containers in row and height for column containers
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.green,
+                  ),
+                ],
+              )),
+
               Container(
-                  //Container with no children try to be as big as possible
-                  width: 100.0,
-                  height: 100.0,
-                  color: Colors.green,
-                  //margin: EdgeInsets.all(20.0),
-                  padding: EdgeInsets.all(5.0),
-                  //Containers with children, size themselves to their children
-                  child: Text("Container 3"))
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      color: Colors.blue,
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
