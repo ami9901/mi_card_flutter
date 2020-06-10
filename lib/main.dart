@@ -42,50 +42,36 @@ class MyApp extends StatelessWidget {
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 //use padding class to enable padding as Card doesn't have a padding attribute
-                child: Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 15.0,
-                      ),
-                      Text(
-                        '+91 7069859601',
-                        style: TextStyle(
-                            color: Colors.teal.shade900,
-                            fontFamily: 'Source Sans Pro',
-                            fontSize: 20.0),
-                      ),
-                    ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+91 7069859601',
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0),
                   ),
                 ),
               ),
               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.mail,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 15.0,
-                      ),
-                      Text(
-                        'example123@xyz.com',
-                        style: TextStyle(
-                            color: Colors.teal.shade900,
-                            fontFamily: 'Source Sans Pro',
-                            fontSize: 20.0),
-                      ),
-                    ],
+
+                //ListTile works same as row when Card is a parent
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'example123@xyz.com',
+                    style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0),
                   ),
                 ),
               ),
